@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindcssPractice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/bf7b127d49.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        .marker::before{
+            content: "|";
+            margin-right: 1rem;
+            color:  rgb(254 202 202);
+        }
+    </style>
+</head>
+<body class="bg-red-700">
+    <div class="header bg-red-700">
+        <div class="header-content flex flex-row lg:gap-x-52 hidden md:flex">
+            <div class="flex justify-center items-center">
+                <a class="pt-2 pl-4 pb-2 ml-24 md:ml-0" href="#">
+                    <img class="min-w-[128px] h-20" src="./image/W-Bronze-logo-New-1.png" alt="">
+                </a>
+            </div>
+            <div class="flex items-center pr-5">
+                <nav>
+                    <ul class="flex flex flex-row flex-wrap gap-x-4 justify-end">
+                        <li class="marker1"><a class="uppercase text-base font-medium text-slate-50" href="#">Trang chủ</a></li>
+                        <li class="marker"><a class="uppercase text-base font-medium text-slate-50" href="#">Rượu vang</a></li>
+                        <li class="marker"><a class="uppercase text-base font-medium text-slate-50" href="#">PHA LÊ RIEDEL</a></li>
+                        <li class="marker"><a class="uppercase text-base font-medium text-slate-50" href="#">NHÀ SẢN XUẤT</a></li>
+                        <li class="marker"><a class="uppercase text-base font-medium text-slate-50" href="#">kiến thức</a></li>
+                        <li class="marker"><a class="uppercase text-base font-medium text-slate-50" href="#">khuyến mại</a></li>
+                        <li class="marker"><a class="uppercase text-base font-medium text-slate-50" href="#">quà tặng</a></li>
+                        <li class="marker"><a class="uppercase text-base font-medium text-slate-50" href="#">liên hệ</a></li>
+                        <li class="marker">
+                            <a class="uppercase" href="#">
+                                <i class="fa-solid fa-magnifying-glass text-lg" style="color: #ffffff;"></i>
+                            </a>
+                        </li>
+                        <li class="marker">
+                            <a class="uppercase" href="#">
+                                <i class="fa-solid fa-cart-shopping text-lg" style="color: #ffffff;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="nav_mobile flex md:hidden justify-center items-center">
+            <div class="flex-1 pl-2">
+                <a href="#"><i class="fa-solid fa-bars text-2xl" style="color: #ffffff;"></i></a>
+            </div>
+            <div class="flex justify-center items-center">
+                <a class="pt-2 pb-2 flex items-center" href="#">
+                    <img class="min-w-[80px] sm:min-w-[128px] h-12 sm:h-20" src="./image/W-Bronze-logo-New-1.png" alt="">
+                </a>
+            </div>
+            <div class="flex-1 flex justify-end gap-3 pr-2">
+                <a class="uppercase" href="#">
+                    <i class="fa-solid fa-magnifying-glass text-lg" style="color: #ffffff;"></i>
+                </a>
+                <a class="uppercase" href="#">
+                    <i class="fa-solid fa-cart-shopping text-lg" style="color: #ffffff;"></i>
+                </a>
+            </div>  
+        </div>
+    </div>
+    <div class="side-content hidden md:flex w-fit h-fit bg-red-700 fixed top-1/4 end-1 rounded-lg">
+        <div class="flex">
+            <ul class="flex flex-col flex-wrap gap-y-2 pt-3 pb-3">
+                <li class="border-b"><a class=" border-red-200" href="#"><img class="w-[24] h-[24] ml-6 mt-2" src="image/icon-home.png" alt="">
+                    <h1 class="text-xs text-white text-center p-1">Trang chủ</h1>
+                </a></li>
+                <li class="border-b"><a class=" border-red-200" href="#"><img class="w-[24] h-[24] ml-6 mt-2" src="image/icon_call.png" alt="">
+                    <h1 class="text-xs text-white text-center p-1">Liên hệ <br> hotline</h1>
+                </a></li>
+                <li class="border-b"><a class="border-red-200" href="#"><img class="w-[24] h-[24] ml-6 mt-2" src="image/icon_zalo.png" alt="">
+                    <h1 class="text-xs text-white text-center p-1">Nhắn tin <br> Zalo</h1>
+                </a></li>
+                <li class=""><a class="border-red-200" href="#"><img class="w-[24] h-[24] ml-6 mt-2" src="image/icon_messenger.png" alt="">
+                    <h1 class="text-xs text-white text-center p-1">Nhắn tin <br> messenager</h1>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mobile-side-content block md:hidden w-full h-fit bg-red-700 fixed start-0 bottom-0">
+        <ul class="flex flex-row gap-y-2 pt-2 pb-2 gap-x-9 sm:gap-x-20 justify-center items-center">
+            <li>
+                <a class="flex justify-center" href="#"><img class="w-[24px] h-[24px]" src="image/icon_call.png" alt=""></a>
+                <h1 class="text-xs text-white text-center p-1">Gọi điện</h1>
+            </li>
+            <li>
+                <a class="flex justify-center" href="#"><img class="w-[24px] h-[24px]" src="image/icon_zalo.png" alt=""></a>
+                <h1 class="text-xs text-white text-center p-1">Chat Zalo</h1>
+            </li>
+            <li>
+                <a class="flex justify-center" href="#"><img class="w-[24px] h-[24px]" src="image/icon_messenger.png" alt=""></a>
+                <h1 class="text-xs text-white text-center p-1">Messenger</h1>
+            </li>
+            <li>
+                <a class="flex justify-center" href="#"><img class="w-[24px] h-[24px]" src="image/icon_gift.png" alt=""></a>
+                <h1 class="text-xs text-white text-center p-1">Khuyến mãi</h1>
+            </li>
+            <li>
+                <a class="flex justify-center" href="#"><img class="w-[24px] h-[24px]" src="image/icon_map_store.png" alt=""></a>
+                <h1 class="text-xs text-white text-center p-1">Cửa hàng</h1>
+            </li>
+        </ul>
+    </div>
+    <div class="body">
+        <div class="image-slide">
+            <img src="image/ctkm-dauzac-thang-9.png" alt="">
+        </div>
+        <div class="bg-red-700 pt-5 pb-5">
+            <h1 class="text-center text-sm sm:text-xl font-medium text-slate-50">WWINECELLAR.VN – WE ARE MASTER OF WINE <br>
+                <h2 class="text-center text-xs sm:text-sm text-slate-50">Nơi trải nghiệm rượu vang trọn vẹn và thăng hoa</h2></h1>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 bg-yellow-50 p-5 gap-4">
+            <div class="flex items-center flex-col">
+                <img class="w-[40px] h-[40px]" src="image/champagne-1.png" alt="">
+                <span><h1 class="uppercase text-center font-medium text-red-700">2000 SẢN PHẨM <br>
+                    <h2 class="text-center text-xs">Nhập khẩu & phân phối chính hãng</h2>
+                </h1></span>
+            </div>
+            <div class="flex items-center flex-col">
+                <img class="w-[40px] h-[40px]" src="image/gh-toan-quoc.png" alt="">
+                <span><h1 class="uppercase text-center font-medium text-red-700">GIAO HÀNG TOÀN QUỐC <br>
+                    <h2 class="text-center text-xs">Linh hoạt giao hàng theo yêu cầu từ Khách hàng</h2>
+                </h1></span>
+            </div>
+            <div class="flex items-center flex-col">
+                <img class="w-[40px] h-[40px]" src="image/delivery-1.png" alt="">
+                <span><h1 class="uppercase text-center font-medium text-red-700">GIAO HÀNG NHANH (2H) <br>
+                    <h2 class="text-center text-xs">Miễn phí giao hàng tại <br>
+                        Hà Nội, Đà Nẵng, Nha Trang, Hồ Chí Minh, Phú Quốc</h2>
+                </h1></span>
+            </div>
+            <div class="flex items-center flex-col">
+                <img class="w-[40px] h-[40px]" src="image/check-correct.png" alt="">
+                <span><h1 class="uppercase text-center font-medium text-red-700">CAM KẾT CHẤT LƯỢNG <br>
+                    <h2 class="text-center text-xs">Sản phẩm nhập nguyên chai, chính hãng, <br>
+                        từ thương hiệu uy tín.</h2>
+                </h1></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
