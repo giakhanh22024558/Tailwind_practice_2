@@ -11,11 +11,36 @@
     <link rel="icon" href="./image/Winecellar-3D-01.png" type="image/png">
     <title>Document</title>
     <style>
-        .marker::before{
+        .menu-list .marker::before{
             content: "|";
             margin-right: 1rem;
             color:  rgb(254 202 202);
         }
+        .marker2::before{
+            content: "\2022"; /* Unicode character for a bullet point */
+            color: #000; /* Set the color of the bullet point */
+            display: inline-block;
+            width: 1em; /* Adjust the width as needed */
+            margin-left: -1em;
+        }
+        .body, html {
+            overflow-x: hidden; /* Ngăn chặn cuộn ngang */
+        }
+        ::-webkit-scrollbar {
+            width: 5px;
+            border-radius: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgb(185 28 28);
+        }
+
     </style>
 </head>
 <body class="bg-red-700">
@@ -29,7 +54,7 @@
             </div>
             <div class="flex items-center pr-5 flex-end">
                 <nav>
-                    <ul class="flex flex flex-row flex-wrap gap-x-4 justify-end">
+                    <ul class="menu-list flex flex flex-row flex-wrap gap-x-4 justify-end">
                         <li class="marker1"><a class="uppercase text-sm font-medium text-slate-50" href="#">Trang chủ</a></li>
                         <li class="marker"><a class="uppercase text-sm font-medium text-slate-50" href="#">Rượu vang</a></li>
                         <li class="marker"><a class="uppercase text-sm font-medium text-slate-50" href="#">PHA LÊ RIEDEL</a></li>
@@ -293,61 +318,136 @@
 
         <div class="flex bg-white justify-center items-center py-24 flex-col gap-5 px-5">
             <h1 class="uppercase text-red-700 text-2xl text font-medium pb-5 font-serif">Loại rượu vang</h1>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-5">
-                <div class="relative rounded">
-                    <a class="absolute top-5 md:top-[43%] left-6 text-md font-serif text-white uppercase" href="https://winecellar.vn/ruou-vang-do/">Rượu <br> vang Đỏ</a>
-                    <a href="https://winecellar.vn/ruou-vang-do/"><img class="shadow-md rounded-lg" src="https://winecellar.vn/wp-content/uploads/2023/03/tim-hieu-ve-ruou-vang-y.jpg" alt=""></a>
+            <div class="">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-5">
+                    <div class="relative rounded">
+                        <a class="absolute top-5 md:top-[43%] left-6 text-md font-serif text-white uppercase" href="https://winecellar.vn/ruou-vang-do/">Rượu <br> vang Đỏ</a>
+                        <a href="https://winecellar.vn/ruou-vang-do/"><img class="shadow-md rounded-lg" src="https://winecellar.vn/wp-content/uploads/2023/03/tim-hieu-ve-ruou-vang-y.jpg" alt=""></a>
+                    </div>
+                    <div class="relative rounded">
+                        <a class="absolute top-5 md:top-[43%] left-6 text-md font-serif text-black uppercase" href="https://winecellar.vn/ruou-vang-do/">Rượu <br> vang Trắng</a>
+                        <a href="https://winecellar.vn/ruou-vang-do/"><img class="shadow-md rounded-lg" src="https://winecellar.vn/wp-content/uploads/2023/03/tim-hieu-ve-ruou-vang-phap.jpg" alt=""></a>
+                    </div>
+                    <div class="relative rounded">
+                        <a class="absolute top-5 md:top-[43%] left-6 text-md font-serif text-black uppercase" href="https://winecellar.vn/ruou-vang-do/">Rượu <br> champagne</a>
+                        <a href="https://winecellar.vn/ruou-vang-do/"><img class="shadow-md rounded-lg" src="https://winecellar.vn/wp-content/uploads/2023/06/cat-ruou-champagne.jpg" alt=""></a>
+                    </div>
+                    <div class="relative rounded">
+                        <a class="absolute top-5 md:top-[43%] left-6 text-md font-serif text-black uppercase" href="https://winecellar.vn/ruou-vang-do/">Rượu <br> vang hồng</a>
+                        <a href="https://winecellar.vn/ruou-vang-do/"><img class="shadow-md rounded-lg" src="https://winecellar.vn/wp-content/uploads/2023/10/Frame-22-1.jpg" alt=""></a>
+                    </div>
                 </div>
-                <div class="relative rounded">
-                    <a class="absolute top-5 md:top-[43%] left-6 text-md font-serif text-black uppercase" href="https://winecellar.vn/ruou-vang-do/">Rượu <br> vang Trắng</a>
-                    <a href="https://winecellar.vn/ruou-vang-do/"><img class="shadow-md rounded-lg" src="https://winecellar.vn/wp-content/uploads/2023/03/tim-hieu-ve-ruou-vang-phap.jpg" alt=""></a>
+                <div class="flex rounded-lg w-auto mt-10">
+                    <img class="rounded-lg shadow-md" src="https://winecellar.vn/wp-content/uploads/2022/04/220331-Banner-3.jpg" alt="">
                 </div>
-                <div class="relative rounded">
-                    <a class="absolute top-5 md:top-[43%] left-6 text-md font-serif text-black uppercase" href="https://winecellar.vn/ruou-vang-do/">Rượu <br> champagne</a>
-                    <a href="https://winecellar.vn/ruou-vang-do/"><img class="shadow-md rounded-lg" src="https://winecellar.vn/wp-content/uploads/2023/06/cat-ruou-champagne.jpg" alt=""></a>
-                </div>
-                <div class="relative rounded">
-                    <a class="absolute top-5 md:top-[43%] left-6 text-md font-serif text-black uppercase" href="https://winecellar.vn/ruou-vang-do/">Rượu <br> vang hồng</a>
-                    <a href="https://winecellar.vn/ruou-vang-do/"><img class="shadow-md rounded-lg" src="https://winecellar.vn/wp-content/uploads/2023/10/Frame-22-1.jpg" alt=""></a>
-                </div>
-            </div>
-            <div class="flex rounded-lg w-auto">
-                <img class="rounded-lg shadow-md" src="https://winecellar.vn/wp-content/uploads/2022/04/220331-Banner-3.jpg" alt="">
             </div>
         </div>
+        <!--Sao lai bị gap ở đây ??-->
         <div class="bg-white flex flex-col justify-center items-center py-10 px-5 gap-3">
             <h1 class="uppercase text-red-700 text-2xl text font-medium pb-5 font-serif">Sản phẩm bán chạy</h1>
-            <div id="product-gallary" class="relative" data-carousel="static">
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5">
-                    <div class="flex flex-col px-8 gap-4 sm:border-r-2 h-full">
-                        <img src="https://winecellar.vn/wp-content/uploads/2018/12/le-volte-dellornellaia-300x400.jpg" alt="">
-                        <a class="capitalize text-center font-medium font-serif" href="#">Rượu vang ý Le volte dell'Ornellaia 2020</a>
-                        <h1 class="text-center text-red-700 font-medium">1.140.000 đ</h1>
-                        <button class="bg-red-700 hover:bg-red-900 text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+            <div id="product-gallary" class="relative">
+                <div class="relative overflow-hidden">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 duration-700 ease-in-out">
+                        <div class="grid grid-row-3 px-8 gap-4 sm:border-r-2 h-full">
+                            <img src="https://winecellar.vn/wp-content/uploads/2018/12/le-volte-dellornellaia-300x400.jpg" alt="">
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu vang ý Le volte dell'Ornellaia 2020</a>
+                            <h1 class="text-center text-red-700 font-medium">1.140.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900 text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                        </div>
+                        <div class="hidden sm:grid grid-row-3 px-8 gap-4 md:border-r-2 h-full">
+                            <img src="https://winecellar.vn/wp-content/uploads/2020/12/cantina-vierre-vino-rosso-ditalia-300x400.jpg" alt="">
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu Vang Ý Cantina Vierre Vino Rosso D’italia</a>
+                            <h1 class="text-center text-red-700 font-medium">550.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                        </div>
+                        <div class="hidden md:grid grid-row-3 px-8 gap-4 border-r-2">
+                            <img src="https://winecellar.vn/wp-content/uploads/2021/04/chateau-pey-la-tour-2-300x400.jpg" alt="">
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu Vang Pháp Chateau Pey La Tour 2020</a>
+                            <h1 class="text-center text-red-700 font-medium">Giá từ: 550.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Lựa chọn các tùy chọn</button>
+                        </div>
+                        <div class="hidden md:grid grid-row-3 px-8 gap-4 border-r-2">
+                            <img src="https://winecellar.vn/wp-content/uploads/2022/05/dourthe-n1-rouge-300x400.jpg" alt="">
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu vang Pháp Dourthe N°1 Rouge</a>
+                            <h1 class="text-center text-red-700 font-medium">570.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                        </div>
+                        <div class="hidden md:grid grid-row-3 px-8 gap-4">
+                            <img src="https://winecellar.vn/wp-content/uploads/2023/02/bela-ribera-del-duero-300x400.jpg" alt="">
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu vang Tây Ban Nha Bela Ribera Del Duero 2021</a>
+                            <h1 class="text-center text-red-700 font-medium">740.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                        </div>
                     </div>
-                    <div class="hidden sm:flex flex-col px-8 gap-4 md:border-r-2 h-full">
-                        <img src="https://winecellar.vn/wp-content/uploads/2020/12/cantina-vierre-vino-rosso-ditalia-300x400.jpg" alt="">
-                        <a class="capitalize text-center font-medium font-serif" href="#">Rượu Vang Ý Cantina Vierre Vino Rosso D’italia</a>
-                        <h1 class="text-center text-red-700 font-medium">550.000 đ</h1>
-                        <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                </div>  
+            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center px-10 py-16 bg-gradient-to-r from-red-800 gap-10">
+            <h1 class="uppercase text-white text-2xl text font-medium pb-5 font-serif">Sự kiện</h1>
+            <!--Big card-->
+            <div class="drop-shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-[2fr_1fr] justify-items-center bg-white rounded-xl">
+                <div class="flex items-center overflow-hidden">
+                    <img class="" src="https://winecellar.vn/wp-content/uploads/2023/10/dauzac-wine-dinner.jpg" alt="">
+                </div>
+                <div class="drop-shadow-2xl flex flex-col py-5 justify-items-center px-2 lg:px-10">
+                    <div class="flex flex-col justify-between">
+                        <h1 class="font-medium uppercase text-2xl text-center mb-3">CHÂTEAU DAUZAC WINE DINNER</h1>
+                        <ul class="ml-5">
+                            <li class="marker2 uppercase text-lg mb-3">Time: 18:30 (19/10/2023)</li>
+                            <li class="marker2 uppercase text-lg mb-3">ADDRESS: RICO STEAKHOUSE</li>
+                            <li class="marker2 uppercase text-lg mb-3">CONTACT: MS. HẰNG – <span class="text-red-700 font-medium">0904 339 881</span></li>
+                        </ul>
                     </div>
-                    <div class="hidden md:flex flex-col px-8 gap-4 border-r-2">
-                        <img src="https://winecellar.vn/wp-content/uploads/2021/04/chateau-pey-la-tour-2-300x400.jpg" alt="">
-                        <a class="capitalize text-center font-medium font-serif" href="#">Rượu Vang Pháp Chateau Pey La Tour 2020</a>
-                        <h1 class="text-center text-red-700 font-medium">Giá từ: 550.000 đ</h1>
-                        <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Lựa chọn các tùy chọn</button>
+                    <button class="w-fit px-5 bg-red-700 hover:bg-red-900 text-md text-white py-2 rounded uppercase mt-3">Xem sự kiện</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 pr-5 gap-5">
+                <!--Small card-->
+                <div class="drop-shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-[1fr_2fr] justify-items-center bg-white rounded-xl">
+                    <div class="bg-red-900 flex items-center overflow-hidden">
+                        <img class="" src="https://winecellar.vn/wp-content/uploads/2023/11/salentein-wine-dinner-1400x733.jpg" alt="">
                     </div>
-                    <div class="hidden md:flex flex-col px-8 gap-4 border-r-2">
-                        <img src="https://winecellar.vn/wp-content/uploads/2022/05/dourthe-n1-rouge-300x400.jpg" alt="">
-                        <a class="capitalize text-center font-medium font-serif" href="#">Rượu vang Pháp Dourthe N°1 Rouge</a>
-                        <h1 class="text-center text-red-700 font-medium">570.000 đ</h1>
-                        <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                    <div class="flex flex-col py-5 justify-items-center px-2">
+                        <div class="flex flex-col justify-between">
+                            <h1 class="font-medium uppercase text-sm text-center mb-3">CHÂTEAU DAUZAC WINE DINNER</h1>
+                            <ul class="ml-5">
+                                <li class="marker2 uppercase text-sm mb-3">Time: 18:30 (19/10/2023)</li>
+                                <li class="marker2 uppercase text-sm mb-3">ADDRESS: RICO STEAKHOUSE</li>
+                                <li class="marker2 uppercase text-sm mb-3">CONTACT: MS. HẰNG – <span class="text-red-700 font-medium">0904 339 881</span></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="hidden md:flex flex-col px-8 gap-4">
-                        <img src="https://winecellar.vn/wp-content/uploads/2023/02/bela-ribera-del-duero-300x400.jpg" alt="">
-                        <a class="capitalize text-center font-medium font-serif" href="#">Rượu vang Tây Ban Nha Bela Ribera Del Duero 2021</a>
-                        <h1 class="text-center text-red-700 font-medium">740.000 đ</h1>
-                        <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                </div>
+                <!--Small card-->
+                <div class="drop-shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-[1fr_2fr] justify-items-center bg-white rounded-xl">
+                    <div class="bg-red-900 flex items-center overflow-hidden">
+                        <img class="" src="https://winecellar.vn/wp-content/uploads/2023/11/champagne-billecart-salmon-wine-dinner-764x400.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col py-5 justify-items-center px-2">
+                        <div class="flex flex-col justify-between">
+                            <h1 class="font-medium uppercase text-sm text-center mb-3">CHÂTEAU DAUZAC WINE DINNER</h1>
+                            <ul class="ml-5">
+                                <li class="marker2 uppercase text-sm mb-3">Time: 18:30 (19/10/2023)</li>
+                                <li class="marker2 uppercase text-sm mb-3">ADDRESS: RICO STEAKHOUSE</li>
+                                <li class="marker2 uppercase text-sm mb-3">CONTACT: MS. HẰNG – <span class="text-red-700 font-medium">0904 339 881</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Small card-->
+                <div class="drop-shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-[1fr_2fr] justify-items-center bg-white rounded-xl">
+                    <div class="bg-red-900 flex items-center">
+                        <img class="" src="https://winecellar.vn/wp-content/uploads/2023/11/beaujolais-nouveau-day-2023-764x400.jpg" alt="">
+                    </div>
+                    <div class="flex flex-col py-5 justify-items-center px-2">
+                        <div class="flex flex-col justify-between">
+                            <h1 class="font-medium uppercase text-sm text-center mb-3">CHÂTEAU DAUZAC WINE DINNER</h1>
+                            <ul class="ml-5">
+                                <li class="marker2 uppercase text-sm mb-3">Time: 18:30 (19/10/2023)</li>
+                                <li class="marker2 uppercase text-sm mb-3">ADDRESS: RICO STEAKHOUSE</li>
+                                <li class="marker2 uppercase text-sm mb-3">CONTACT: MS. HẰNG – <span class="text-red-700 font-medium">0904 339 881</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -398,6 +498,119 @@
                 </a></li>
             </ul>
         </div>
+    </div>
+
+    <div class="bottom bg-slate-100">
+        <!--First section-->
+        <div class="grid grid-cols-1 border-b border-dashed sm:grid-cols-4 py-12 center-top border-yellow-600">
+            <!--First col-->
+            <div class="flex flex-col justify-center items-center gap-3 self-start">
+                <h1 class="uppercase text-red-700 font-medium text-lg font-serif mb-3">Thông tin</h1>
+                <a class="uppercase text-sm text-center" href="#">Giới thiệu công ty</a>
+                <a class="uppercase text-sm text-center" href="#">Chính sách</a>
+                <a class="uppercase text-sm text-center" href="#">Hướng dẫn mua hàng</a>
+                <a class="uppercase text-sm text-center" href="#">Câu hỏi thường gặp</a>
+            </div>
+             <!--Second col-->
+            <div class="flex flex-col justify-center items-center gap-3 self-start">
+                <h1 class="uppercase text-red-700 font-medium text-lg font-serif mb-3 text-center">DANH MỤC RƯỢU</h1>
+                <a class="uppercase text-sm text-center" href="#">Rượu vang</a>
+                <a class="uppercase text-sm text-center" href="#">Rượu vang Pháp</a>
+                <a class="uppercase text-sm text-center" href="#">Rượu vang Ý</a>
+                <a class="uppercase text-sm text-center" href="#">Rượu vang Mỹ</a>
+                <a class="uppercase text-sm text-center" href="#">Rượu vang Chile</a>
+                <a class="uppercase text-sm text-center" href="#">Rượu vang tây ban nha</a>
+                <a class="uppercase text-sm text-center" href="#">ly rượu pha lê</a>
+            </div>
+             <!--Third col-->
+            <div class="flex flex-col justify-center items-center gap-20 self-start">
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class="uppercase text-red-700 font-medium text-lg font-serif mb-3">Quà tặng</h1>
+                    <a class="uppercase text-sm text-center" href="#">Quà tặng doanh nghiệp</a>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class="uppercase text-red-700 font-medium text-lg font-serif mb-3">CATALOGUE</h1>
+                    <a class="uppercase text-sm text-center pb-3" href="#">festival CATALOGUE</a>
+                    <a class="uppercase text-sm text-center" href="#">Riedel glass</a>
+                </div>
+            </div>
+            <!--Fouth col-->
+            <div class="flex flex-col justify-center items-center gap-20 self-start">
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class="uppercase text-red-700 font-medium text-lg font-serif mb-3 text-center">Kết nối với chúng tôi</h1>
+                    <div class="flex flex-row gap-3 flex-wrap justify-center">
+                        <i class="fa-brands fa-youtube text-2xl hover:text-sky-700 hover:cursor-pointer duration-150"></i>
+                        <i class="fa-brands fa-pinterest text-2xl hover:text-sky-700 hover:cursor-pointer duration-150"></i>
+                        <i class="fa-brands fa-instagram text-2xl hover:text-sky-700 hover:cursor-pointer duration-150"></i>
+                        <i class="fa-brands fa-linkedin text-2xl hover:text-sky-700 hover:cursor-pointer duration-150"></i>
+                        <i class="fa-brands fa-facebook text-2xl hover:text-sky-700 hover:cursor-pointer duration-150"></i>
+                    </div>
+                    <h1 class="uppercase text-red-700 font-medium text-lg font-serif mb-3 text-center">Chứng nhận</h1>
+                    <div class=" grid grid-cols-2 items-center">
+                        <img class="self-start" src="https://winecellar.vn/wp-content/uploads/2021/10/image-2.png" alt="">
+                        <img class="" src="https://winecellar.vn/wp-content/uploads/2021/07/certificate-3.png?ID=4b8a8ee3-256d-4e67-abbb-e8d77ebe600d" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--second section-->
+        <div class="border-b border-dashed border-yellow-600 flex flex-col gap-3 items-center py-12 center-top justify-center">
+            <h1 class="uppercase text-lg text-red-700 uppercase text-center">HỆ THỐNG HẦM RƯỢU VANG WINECELLAR.VN (CÔNG TY TNHH HẦM RƯỢU VIỆT NAM)</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-10 pl-10">
+                <div class="flex flex-col gap-4">
+                    <h1 class="uppercase font-medium text-xl">TP. HÀ NỘI</h1>
+                    <h1 class="text-sm">Số 43 Phan Chu Trinh, Hoàn Kiếm</h1>
+                    <h1 class="text-sm">Số 88 Đào Tấn, Ba Đình</h1>
+                    <h1 class="text-sm">Số 246 Hoàng Ngân, Cầu Giấy</h1>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h1 class="uppercase font-medium text-xl">TP. HỒ CHÍ MINH</h1>
+                    <h1 class="text-sm">Số 188 Nguyễn Văn Thủ, Quận 1, TP Hồ Chí Minh</h1>
+                    <h1 class="text-sm">Số 253 Nam Kì Khởi Nghĩa, Quận 3, TP Hồ Chí Minh</h1>
+                    <h1 class="text-sm">Số 58 Song Hành, An Phú, TP Thủ Đức</h1>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h1 class="uppercase font-medium text-xl">TP. ĐÀ NẴNG</h1>
+                    <h1 class="text-sm">Số 172 Nguyễn Văn Linh, Vĩnh Trung, Thanh Khê</h1>
+                    <h1 class="uppercase font-medium text-xl">NHA TRANG</h1>
+                    <h1 class="text-sm">Số 15 Hai Bà Trưng, Phường Xương Huân, Thành phố Nha Trang, Tỉnh Khánh Hòa</h1>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h1 class="uppercase font-medium text-xl">HOTLINE</h1>
+                    <a class="hover:cursor-pointer hover:text-sky-700 text-red-700" href="#">094 669 8008</a>
+                    <a class="hover:cursor-pointer hover:text-sky-700 text-red-700" href="#">0903 530 268</a>
+                    <a class="hover:cursor-pointer hover:text-sky-700 text-red-700" href="#">0903 520 268</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h1 class="uppercase font-medium text-xl">HỘI AN</h1>
+                    <h1 class="text-sm">Số 166 Nguyễn Trường Tộ, Phường Cẩm Phô, Hội An</h1>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <h1 class="uppercase font-medium text-xl">PHÚ QUỐC</h1>
+                    <h1 class="text-sm">Số 217B Đường 30/4, Phú Quốc, Kiên Giang</h1>
+                </div>
+            </div>
+        </div>
+
+        <!--third section-->
+        <div class="border-b border-dashed flex flex-col gap-3 items-center py-3 center-top justify-center">
+            <div class="flex-row flex gap-5 justify-center flex-wrap">
+                <a class="uppercase text-xs text-gray-400" href="#">RƯỢU VANG PHÁP</a>
+                <a class="uppercase text-xs text-gray-400" href="#">RƯỢU VANG Ý</a>
+                <a class="uppercase text-xs text-gray-400" href="#">RƯỢU VANG CHI LÊ</a>
+                <a class="uppercase text-xs text-gray-400" href="#">RƯỢU VANG MỸ</a>
+                <a class="uppercase text-xs text-gray-400" href="#">BÁNH BỈ</a>
+                <a class="uppercase text-xs text-gray-400" href="#">NƯỚC KHOÁNG BORJOMI</a>
+                <a class="uppercase text-xs text-gray-400" href="#">LY PHA LÊ RIEDEL</a>
+            </div>
+            <h1 class="text-gray-500 pb-3">Copyright 2023 © <span class="font-medium">KHÁNH.vn</span></h1>
+            <h1 class="text-gray-400 text-xs pb-10">Nội dung trên website chỉ mang tính chất luyện tập. Chúng tôi không bán hàng trực tuyến ! </span></h1>
+        </div>
+
+        <div class="">
+
+        </div>
+
     </div>
 
 </body>
