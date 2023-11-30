@@ -45,7 +45,7 @@
 </head>
 <body class="bg-red-700">
     <!--header content-->
-    <div class="header bg-red-700 sticky top-0 z-[100]">
+    <div class="header bg-red-700 sticky top-0 z-[30]">
         <div class="header-content flex flex-row lg:gap-x-52 hidden md:flex items-center justify-between">
             <div class="flex justify-center items-center flex-start">
                 <a class="pt-2 pl-4 pb-2 ml-24 md:ml-0" href="#">
@@ -78,9 +78,12 @@
             </div>
         </div>
         <div class="nav_mobile flex md:hidden justify-center items-center">
-            <div class="flex-1 pl-2">
-                <a href="#"><i class="fa-solid fa-bars text-2xl" style="color: #ffffff;"></i></a>
+            <div id="menu-button" class="flex-1 flex-start justify-start">
+                <button class="text-white bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 focus:outline-none bg-transparent" type="button" data-drawer-target="drawer-example" data-drawer-show="drawer-example" aria-controls="drawer-example">
+                    <i class="fa-solid fa-bars text-2xl" style="color: #ffffff;"></i>
+                </button>
             </div>
+
             <div class="flex justify-center items-center">
                 <a class="pt-2 pb-2 flex items-center" href="#">
                     <img class="min-w-[80px] sm:min-w-[128px] h-12 sm:h-20" src="./image/W-Bronze-logo-New-1.png" alt="">
@@ -135,7 +138,7 @@
             </div>
             
             <!--slide indicator-->
-            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <div class="z-[20] absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
                 <button type="button" class="w-3 h-3 rounded-full border-2 border-white" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
                 <button type="button" class="w-3 h-3 rounded-full border-2 border-white" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
                 <button type="button" class="w-3 h-3 rounded-full border-2 border-white" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
@@ -148,7 +151,7 @@
             <!-- Slider controls -->
 
             <!--left-->
-            <button type="button" class="invisible sm:visible absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <button type="button" class="z-[20] invisible sm:visible absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent hover:bg-red-700 hover:border-red-700 border-white border-2">
                     <svg class="w-4 h-4 text-white dark:text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
@@ -157,7 +160,7 @@
                 </span>
             </button>
             <!--right-->
-            <button type="button" class="invisible sm:visible absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <button type="button" class="z-[20] invisible sm:visible absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent hover:bg-red-700 hover:border-red-700 border-white border-2">
                     <svg class="w-4 h-4 text-white dark:text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
@@ -343,13 +346,18 @@
             </div>
         </div>
         <!--Sao lai bị gap ở đây ??-->
-        <div class="bg-white flex flex-col justify-center items-center py-10 px-5 gap-3">
+        <div class="bg-white flex flex-col justify-center items-center py-20 px-5 gap-3">
             <h1 class="uppercase text-red-700 text-2xl text font-medium pb-5 font-serif">Sản phẩm bán chạy</h1>
-            <div id="product-gallary" class="relative">
-                <div class="relative overflow-hidden">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 duration-700 ease-in-out">
+            <!--product galary-->
+            <div id="controls-carousel" class="relative w-full" data-carousel="static">
+                <!-- Carousel wrapper -->
+                <div class="relative h-[35rem] overflow-hidden rounded-lg md:h-[30rem]">
+                    <!-- Item 1 -->
+                    <div class="bg-white hidden duration-700 ease-in-out grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5" data-carousel-item>
                         <div class="grid grid-row-3 px-8 gap-4 sm:border-r-2 h-full">
-                            <img src="https://winecellar.vn/wp-content/uploads/2018/12/le-volte-dellornellaia-300x400.jpg" alt="">
+                            <div class="flex justify-center items-center">
+                                <img src="https://winecellar.vn/wp-content/uploads/2018/12/le-volte-dellornellaia-300x400.jpg" alt="">
+                            </div>
                             <a class="capitalize text-center font-medium font-serif" href="#">Rượu vang ý Le volte dell'Ornellaia 2020</a>
                             <h1 class="text-center text-red-700 font-medium">1.140.000 đ</h1>
                             <button class="bg-red-700 hover:bg-red-900 text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
@@ -379,7 +387,95 @@
                             <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
-                </div>  
+                    <!-- Item 2 -->
+                    <div class="bg-white hidden duration-700 ease-in-out grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5" data-carousel-item>
+                        <div class="grid grid-row-3 px-8 gap-4 sm:border-r-2 h-full">
+                            <div class="flex justify-center items-center">
+                                <img src="https://winecellar.vn/wp-content/uploads/2023/09/torbreck-woodcutters-semillon-300x400.jpg" alt="">
+                            </div>
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu Vang Úc Torbreck Woodcutter’s Semillon 2023</a>
+                            <h1 class="text-center text-red-700 font-medium">970.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900 text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                        </div>
+                        <div class="hidden sm:grid grid-row-3 px-8 gap-4 md:border-r-2 h-full">
+                            <img src="https://winecellar.vn/wp-content/uploads/2023/09/torbreck-cuvee-juveniles-300x400.jpg" alt="">
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu Vang Úc Torbreck Cuvée Juveniles 2022</a>
+                            <h1 class="text-center text-red-700 font-medium">970.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                        </div>
+                        <div class="hidden md:grid grid-row-3 px-8 gap-4 border-r-2">
+                            <img src="https://winecellar.vn/wp-content/uploads/2021/04/chateau-pey-la-tour-2-300x400.jpg" alt="">
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu Vang Ý Tenuta Ammiraglia Terre More 2020</a>
+                            <h1 class="text-center text-red-700 font-medium">700.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                        </div>
+                        <div class="hidden md:grid grid-row-3 px-8 gap-4 border-r-2">
+                            <img src="https://winecellar.vn/wp-content/uploads/2018/03/m-merlot-salento-limited-edition-1-300x400.jpg" alt="">
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu Vang Ý M Merlot Salento Limited Edition</a>
+                            <h1 class="text-center text-red-700 font-medium">890.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                        </div>
+                        <div class="hidden md:grid grid-row-3 px-8 gap-4">
+                            <img src="https://winecellar.vn/wp-content/uploads/2023/06/comte-de-dauzac-haut-medoc-300x400.jpg" alt="">
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu vang Pháp Comte de Dauzac Haut-Médoc 2020</a>
+                            <h1 class="text-center text-red-700 font-medium">730.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="bg-white hidden duration-700 ease-in-out grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5" data-carousel-item>
+                        <div class="grid grid-row-3 px-8 gap-4 sm:border-r-2 h-full">
+                            <div class="flex justify-center items-center">
+                                <img src="https://winecellar.vn/wp-content/uploads/2019/10/ruou-vang-do-le-botrosecco-maremma-2018-300x400.jpg" alt="">
+                            </div>
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu Vang Ý Le Mortelle Botrosecco 2020</a>
+                            <h1 class="text-center text-red-700 font-medium">Giá từ: 1.850.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900 text-sm text-white py-2 rounded uppercase">Lựa chọn các tùy chọn</button>
+                        </div>
+                        <div class="hidden sm:grid grid-row-3 px-8 gap-4 md:border-r-2 h-full">
+                            <img src="https://winecellar.vn/wp-content/uploads/2023/08/yvecourt-bordeaux-rouge-2022-300x400.jpg" alt="">
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu vang Pháp Yvecourt Bordeaux Rouge 2022</a>
+                            <h1 class="text-center text-red-700 font-medium">470.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                        </div>
+                        <div class="hidden md:grid grid-row-3 px-8 gap-4 border-r-2">
+                            <img src="https://winecellar.vn/wp-content/uploads/2018/07/aurore-de-dauzac-300x400.jpg" alt="">
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu vang Pháp Aurore De Dauzac 2019</a>
+                            <h1 class="text-center text-red-700 font-medium">1.090.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                        </div>
+                        <div class="hidden md:grid grid-row-3 px-8 gap-4 border-r-2">
+                            <img src="https://winecellar.vn/wp-content/uploads/2021/12/ruou-vang-y-con-cong-vindoro-24-karat-gold-2019-300x400.jpg" alt="">
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu Vang Ý Con Công Vindoro 24 Karat Gold 2019</a>
+                            <h1 class="text-center text-red-700 font-medium">1.600.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                        </div>
+                        <div class="hidden md:grid grid-row-3 px-8 gap-4">
+                            <img src="https://winecellar.vn/wp-content/uploads/2017/09/chateau-dauzac-300x400.jpg" alt="">
+                            <a class="capitalize text-center font-medium font-serif" href="#">Rượu Vang Pháp Château Dauzac 2019</a>
+                            <h1 class="text-center text-red-700 font-medium"><span class="text-red-700 line-through text-center  font-medium">2.800.000 đ</span>  1.850.000 đ</h1>
+                            <button class="bg-red-700 hover:bg-red-900  text-sm text-white py-2 rounded uppercase">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- Slider controls -->
+                <button type="button" class="z-[20] absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent group-focus:outline-none">
+                        <svg class="w-4 h-4 text-gray-800 rtl:rotate-180 hover:text-red-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button" class="z-[20] absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent group-focus:outline-none">
+                        <svg class="w-4 h-4 text-gray-800 rtl:rotate-180 hover:text-red-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
             </div>
         </div>
         <div class="flex flex-col justify-center items-center px-10 py-16 bg-gradient-to-r from-red-800 gap-10">
@@ -455,7 +551,7 @@
     </div>
 
     <!--side content for small screen-->
-    <div class="mobile-side-content block md:hidden w-full h-fit bg-red-700 fixed start-0 bottom-0 z-[100]">
+    <div class="mobile-side-content block md:hidden w-full h-fit bg-red-700 fixed start-0 bottom-0 z-[20]">
         <ul class="flex flex-row gap-y-2 pt-2 pb-2 gap-x-9 sm:gap-x-20 justify-center items-center">
             <li>
                 <a class="flex justify-center" href="#"><img class="w-[24px] h-[24px]" src="image/icon_call.png" alt=""></a>
@@ -481,7 +577,7 @@
     </div>
 
     <!--side content with big screen-->
-    <div class="side-content hidden md:flex w-fit h-fit bg-red-700 fixed top-1/4 end-1 rounded-lg z-[100]">
+    <div class="side-content hidden md:flex w-fit h-fit bg-red-700 fixed top-1/4 end-1 rounded-lg z-[20]">
         <div class="flex">
             <ul class="flex flex-col flex-wrap gap-y-2 pt-3 pb-3">
                 <li class="border-b"><a class=" border-red-200" href="#"><img class="w-[24] h-[24] ml-6 mt-2" src="image/icon-home.png" alt="">
@@ -609,7 +705,7 @@
     </div>
 
     <!--bottom fixed menu-->
-    <div class="shadow-2xl side-content py-3 hidden md:flex w-full h-fit bg-neutral-100 fixed bottom-0 z-[100]">
+    <div class="shadow-2xl side-content py-3 hidden md:flex w-full h-fit bg-neutral-100 fixed bottom-0 z-[20]">
         <div class="grid grid-cols-3 w-full">
             <div class="flex flex-row gap-5 justify-center border-r-[1px] border-gray-300 items-center">
                 <img src="https://winecellar.vn/wp-content/uploads/2022/03/icon_map.png" alt="">
@@ -624,6 +720,23 @@
                 <h1 class="uppercase text-xs font-normal">Tư vấn quà tặng rượu vang</h1>
             </div>
         </div>
+    </div>
+
+    <!-- drawer component -->
+    <div id="drawer-example" class="z-[150] fixed top-0 left-0 z-40 h-screen py-12 overflow-y-auto transition-transform -translate-x-full w-64 bg-red-700" tabindex="-1" aria-labelledby="drawer-label">
+        
+        <div class="flex flex-col px-5">
+            <input type="text" class="w-full h-full pl-3 text-sm focus:outline-none" placeholder="Hãy thử bắt đầu với 'Rượu vang pháp chateau corbin' xem sao!">
+            
+        </div>
+
+        <button type="button" data-drawer-hide="drawer-example" aria-controls="drawer-example" class="text-gray-400 bg-transparent hover:bg-red-900 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 flex items-center justify-center text-white" >
+            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+            </svg>
+            <span class="sr-only">Close menu</span>
+        </button>
+        
     </div>
 
 </body>
