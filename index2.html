@@ -43,7 +43,7 @@
 
     </style>
 </head>
-<body class="bg-red-700">
+<body class="bg-gray-700">
     <!--header content-->
     <div class="header bg-red-700 sticky top-0 z-[30]">
         <div class="header-content flex flex-row lg:gap-x-52 hidden md:flex items-center justify-between">
@@ -151,7 +151,7 @@
             <!-- Slider controls -->
 
             <!--left-->
-            <button type="button" class="z-[20] invisible sm:visible absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <button type="button" class="z-[20] invisible sm:visible absolute top-[45%] start-0 z-30 flex items-center justify-center px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent hover:bg-red-700 hover:border-red-700 border-white border-2">
                     <svg class="w-4 h-4 text-white dark:text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
@@ -160,7 +160,7 @@
                 </span>
             </button>
             <!--right-->
-            <button type="button" class="z-[20] invisible sm:visible absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <button type="button" class="z-[20] invisible sm:visible absolute top-[45%] end-0 z-30 flex items-center justify-center px-4 cursor-pointer group focus:outline-none" data-carousel-next>
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent hover:bg-red-700 hover:border-red-700 border-white border-2">
                     <svg class="w-4 h-4 text-white dark:text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
@@ -460,7 +460,7 @@
                     
                 </div>
                 <!-- Slider controls -->
-                <button type="button" class="z-[20] absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <button type="button" class="z-[20] absolute top-[42%] start-0 z-30 flex items-center justify-center px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
                     <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent group-focus:outline-none">
                         <svg class="w-4 h-4 text-gray-800 rtl:rotate-180 hover:text-red-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
@@ -468,7 +468,7 @@
                         <span class="sr-only">Previous</span>
                     </span>
                 </button>
-                <button type="button" class="z-[20] absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <button type="button" class="z-[20] absolute top-[42%] end-0 z-30 flex items-center justify-center px-4 cursor-pointer group focus:outline-none" data-carousel-next>
                     <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-transparent group-focus:outline-none">
                         <svg class="w-4 h-4 text-gray-800 rtl:rotate-180 hover:text-red-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
@@ -723,11 +723,45 @@
     </div>
 
     <!-- drawer component -->
-    <div id="drawer-example" class="z-[150] fixed top-0 left-0 z-40 h-screen py-12 overflow-y-auto transition-transform -translate-x-full w-64 bg-red-700" tabindex="-1" aria-labelledby="drawer-label">
+    <div id="drawer-example" class="overflow-y-hidden z-[150] fixed top-0 left-0 z-40 h-screen py-12 overflow-y-auto transition-transform -translate-x-full w-64 bg-red-700" tabindex="-1" aria-labelledby="drawer-label">
         
-        <div class="flex flex-col px-5">
-            <input type="text" class="w-full h-full pl-3 text-sm focus:outline-none" placeholder="Hãy thử bắt đầu với 'Rượu vang pháp chateau corbin' xem sao!">
-            
+        <div class="flex flex-col">
+            <div class="flex flex-row mx-5">
+                <input type="text" class="w-full h-full pl-3 text-sm focus:outline-none" placeholder="Hãy thử bắt đầu với 'Rượu vang pháp chateau corbin' xem sao!">
+                <button class="bg-yellow-600 px-3"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <!-- <div class="flex items-center">
+                <nav>
+                    <ul class="menu-list grid grid-row-8 justify-end">
+                        <li class="border-2 border-white w-full"><a class="uppercase text-sm font-medium text-slate-50" href="#">Trang chủ</a></li>
+                        <li class=""><a class="uppercase text-sm font-medium text-slate-50" href="#">Rượu vang</a></li>
+                        <li class=""><a class="uppercase text-sm font-medium text-slate-50" href="#">PHA LÊ RIEDEL</a></li>
+                        <li class=""><a class="uppercase text-sm font-medium text-slate-50" href="#">NHÀ SẢN XUẤT</a></li>
+                        <li class=""><a class="uppercase text-sm font-medium text-slate-50" href="#">kiến thức</a></li>
+                        <li class=""><a class="uppercase text-sm font-medium text-slate-50" href="#">khuyến mại</a></li>
+                        <li class=""><a class="uppercase text-sm font-medium text-slate-50" href="#">quà tặng</a></li>
+                        <li class=""><a class="uppercase text-sm font-medium text-slate-50" href="#">liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div> -->
+            <div class="w-full mt-3">
+                <a class="w-full block border-t-[1px] border-gray-100 py-4 uppercase text-xs pl-4 font-medium text-slate-50" href="#">Trang chủ</a>
+                <a class="w-full block border-t-[1px] border-gray-100 py-4 uppercase text-xs pl-4 font-medium text-slate-50" href="#">Rượu vang</a>
+                <a class="w-full block border-t-[1px] border-gray-100 py-4 uppercase text-xs pl-4 font-medium text-slate-50" href="#">PHA LÊ RIEDEL</a>
+                <a class="w-full block border-t-[1px] border-gray-100 py-4 uppercase text-xs pl-4 font-medium text-slate-50" href="#">NHÀ SẢN XUẤT</a>
+                <a class="w-full block border-t-[1px] border-gray-100 py-4 uppercase text-xs pl-4 font-medium text-slate-50" href="#">kiến thức</a>
+                <a class="w-full block border-t-[1px] border-gray-100 py-4 uppercase text-xs pl-4 font-medium text-slate-50 flex flex-row items-center gap-2" href="#">
+                    <img class="w-[20px] h-[20px]" src="https://winecellar.vn/wp-content/uploads/2023/11/172472_gift_present_icon-1.png" alt=""><span>quà tặng</span>
+                </a>
+                <a class="w-full block border-t-[1px] border-gray-100 py-4 uppercase text-xs pl-4 font-medium text-slate-50 flex flex-row items-center gap-2" href="#">
+                    <img class="w-[20px] h-[20px]" src="https://winecellar.vn/wp-content/uploads/2023/11/172543_sale_icon.png" alt=""><span>quà tặng</span>
+                </a>
+                <a class="w-full block border-t-[1px] border-gray-100 py-4 uppercase pl-4 text-xs font-medium text-slate-50" href="#">liên hệ</a>
+                <a class="flex w-full border-t-[1px] border-gray-100 justify-center uppercase text-md py-8 text-white font-medium" href="">Gọi hotline</a>
+                <div class="flex justify-center items-center px-5 border-t-[1px] pt-5 border-gray-100 h-fit">
+                    <button class="bg-yellow-600 text-xs rounded-sm text-white w-full py-1 uppercase font-medium">Chat Zalo</button>
+                </div>
+            </div>
         </div>
 
         <button type="button" data-drawer-hide="drawer-example" aria-controls="drawer-example" class="text-gray-400 bg-transparent hover:bg-red-900 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 flex items-center justify-center text-white" >
